@@ -1,0 +1,17 @@
+﻿See https://stylecop.codeplex.com/workitem/7474
+See https://stylecopplus.codeplex.com/wikipage?title=How%20to%20Create%20StyleCop%20Custom%20Rule
+See http://www.developerin.net/a/66-StyleCop/50-Create-custom-rules-in-StyleCop
+
+Rules-Reasoning:
+https://msdn.microsoft.com/en-us/library/hh873175%28v=vs.110%29.aspx
+https://msdn.microsoft.com/en-us/magazine/jj991977.aspx
+http://www.filipekberg.se/2012/09/20/avoid-shooting-yourself-in-the-foot-with-tasks-and-async/
+http://haacked.com/archive/2014/11/11/async-void-methods/
+
+TODO: Test / Demo assemblies
+TODO: Automated tests
+TODO: Nuget package? Other packaging mechanism? (it's just one dll...)
+
+Future rules:
+-don't do sync over async
+-don't await on Task.WhenAll (--> potentially looses exceptions)
