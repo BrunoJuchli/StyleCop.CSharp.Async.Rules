@@ -1,9 +1,9 @@
-﻿using System.Collections.Generic;
-
-namespace StyleCop.CSharp.Async.Rules
+﻿namespace StyleCop.CSharp.Async.Rules
 {
+    using System.Collections.Generic;
+
     internal interface IMethodVisitor
     {
-        IEnumerable<ViolationData> Visit(Method methodElement);
+        IEnumerable<MethodViolationData> Visit(Method method);
     }
 }

@@ -11,7 +11,7 @@
         <Context>Methods whose name end with an Async suffix must use the async modifier (p.Ex. public async Task ExecuteAsync()).</Context>
         <Description>Fires when a method is named FooAsync() but is missing the async modifier.</Description>
       </Rule>
-      <Rule Name="MethodsWithAsyncModifierShouldReturnATask" CheckId="AR1001">
+      <Rule Name="MethodsWithAsyncModifierShouldReturnAwaitable" CheckId="AR1001">
         <Context>Methods with async modifier which return void are "fire and forget". They can't be synchronized and exceptions are lost.</Context>
         <Description>Fires when a method with async modifier is returning void.</Description>
       </Rule>

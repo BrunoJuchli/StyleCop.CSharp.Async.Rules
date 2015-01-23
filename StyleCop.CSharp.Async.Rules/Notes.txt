@@ -11,6 +11,7 @@ http://haacked.com/archive/2014/11/11/async-void-methods/
 TODO: Test / Demo assemblies
 TODO: Automated tests
 TODO: Nuget package? Other packaging mechanism? (it's just one dll...)
+TODO: ignore async Foo (without Async suffix) of popular libraries? Like caliburn.micro async Task Handle<T>()?
 
 Future rules:
 -don't do sync over async
