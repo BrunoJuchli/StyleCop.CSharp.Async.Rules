@@ -7,23 +7,35 @@ using System.Security.AccessControl;
 
 namespace Specifications
 {
-    public class MsBuildRunner
+    internal class MsBuildRunner
     {
         private static readonly TimeSpan BuildTimeout = TimeSpan.FromSeconds(30);
 
         private static readonly string MsBuildPath = DetermineMsBuildPath();
 
-        public static void BuildProject(string projectFilePath)
+        public static void BuildProject(string projectFilePath, IProcessOutputHandler outputHandler)
         {
             var startInfo = new ProcessStartInfo
             {
                 FileName = MsBuildPath,
                 Arguments = projectFilePath + " /t:Build",
                 CreateNoWindow = true,
-                WindowStyle = ProcessWindowStyle.Hidden
+                WindowStyle = ProcessWindowStyle.Hidden,
+                UseShellExecute = false,
+                RedirectStandardError = true,
+                RedirectStandardOutput = true,
             };
 
-            Process msBuildProcess = Process.Start(startInfo);
+            Process msBuildProcess = new Process
+            {
+                StartInfo = startInfo,
+            };
+
+            msBuildProcess.OutputDataReceived += (sender, args) => outputHandler.HandleOutput(args);
+            msBuildProcess.ErrorDataReceived += (sender, args) => outputHandler.HandleError(args);
+            msBuildProcess.Start();
+            msBuildProcess.BeginOutputReadLine();
+            msBuildProcess.BeginErrorReadLine();
             if (!msBuildProcess.WaitForExit((int)BuildTimeout.TotalMilliseconds))
             {
                 string message = string.Format(

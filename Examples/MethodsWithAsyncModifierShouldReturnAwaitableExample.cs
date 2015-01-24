@@ -1,7 +1,7 @@
-﻿using System.Threading.Tasks;
-
-namespace Examples
+﻿namespace Examples
 {
+    using System.Threading.Tasks;
+
     public class MethodsWithAsyncModifierShouldReturnAwaitableExample
     {
         public async void InvalidAsync()

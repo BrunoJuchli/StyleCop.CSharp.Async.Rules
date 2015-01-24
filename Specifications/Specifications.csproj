@@ -52,11 +52,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ExamplesBasedSpecifications.cs" />
+    <Compile Include="IProcessOutputHandler.cs" />
     <Compile Include="MsBuildRunner.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StyleCopWarningGatheringProcessOutputHandler.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ExemplarMSBuildStandardOutput.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\StyleCop.CSharp.Async.Rules\StyleCop.CSharp.Async.Rules.csproj">
+      <Project>{b1cd5431-b353-4c0c-a372-97be0bf88255}</Project>
+      <Name>StyleCop.CSharp.Async.Rules</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

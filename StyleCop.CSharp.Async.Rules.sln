@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StyleCop.CSharp.Async.Rules", "StyleCop.CSharp.Async.Rules\StyleCop.CSharp.Async.Rules.csproj", "{B1CD5431-B353-4C0C-A372-97BE0BF88255}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Examples", "Examples\Examples.csproj", "{F02334E1-4CE1-4A03-9F82-1C8B16E94C1C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B1CD5431-B353-4C0C-A372-97BE0BF88255} = {B1CD5431-B353-4C0C-A372-97BE0BF88255}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Specifications", "Specifications\Specifications.csproj", "{9F27A1F7-719F-4889-991E-F12E52B319CF}"
 EndProject

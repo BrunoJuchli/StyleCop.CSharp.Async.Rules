@@ -1,0 +1,69 @@
+﻿Microsoft (R) Build Engine version 12.0.31101.0
+[Microsoft .NET Framework, version 4.0.30319.34014]
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Build started 24.01.2015 15:40:28.
+Project "C:\development\StyleCop.CSharp.Async.Rules\Examples\Examples.csproj" on node 1 (Build target(s)).
+GenerateTargetFrameworkMonikerAttribute:
+Skipping target "GenerateTargetFrameworkMonikerAttribute" because all output files are up-to-date with respect to the input files.
+CoreCompile:
+Skipping target "CoreCompile" because all output files are up-to-date with respect to the input files.
+CopyFilesToOutputDirectory:
+  Examples -> C:\development\StyleCop.CSharp.Async.Rules\Examples\bin\Debug\Examples.dll
+C:\development\StyleCop.CSharp.Async.Rules\Examples\CaliburnMicroHandlerException.cs(1,1): warning : SA1633 : CSharp.Documentation : The file has no header, the header Xml is invalid, or the header is not located at the top of the file. [C:\development\StyleCop.CSharp.Async.Rules\Examples\Examples.csproj]
+C:\development\StyleCop.CSharp.Async.Rules\Examples\CaliburnMicroHandlerException.cs(4,1): warning : SA1208 : CSharp.Ordering : System using directives must be placed before all other using directives. [C:\development\StyleCop.CSharp.Async.Rules\Examples\Examples.csproj]
+C:\development\StyleCop.CSharp.Async.Rules\Examples\CaliburnMicroHandlerException.cs(6,1): warning : SA1600 : CSharp.Documentation : The class must have a documentation header. [C:\development\StyleCop.CSharp.Async.Rules\Examples\Examples.csproj]
+C:\development\StyleCop.CSharp.Async.Rules\Examples\CaliburnMicroHandlerException.cs(8,10,11,10): warning : AR0001 : CSharp.Async. : Methods with async modifier (p.Ex. public async Task DoStuffAsync()) must end with Async. [C:\development\StyleCop.CSharp.Async.Rules\Examples\Examples.csproj]
+C:\development\StyleCop.CSharp.Async.Rules\Examples\CaliburnMicroHandlerException.cs(8,1): warning : SA1600 : CSharp.Documentation : The method must have a documentation header. [C:\development\StyleCop.CSharp.Async.Rules\Examples\Examples.csproj]
+C:\development\StyleCop.CSharp.Async.Rules\Examples\MethodEndingWithAsyncMustHaveAsyncModifierExample.cs(1,1): warning : SA1633 : CSharp.Documentation : The file has no header, the header Xml is invalid, or the header is not located at the top of the file. [C:\development\StyleCop.CSharp.Async.Rules\Examples\Examples.csproj]
+C:\development\StyleCop.CSharp.Async.Rules\Examples\MethodEndingWithAsyncMustHaveAsyncModifierExample.cs(5,1): warning : SA1600 : CSharp.Documentation : The class must have a documentation header. [C:\development\StyleCop.CSharp.Async.Rules\Examples\Examples.csproj]
+C:\development\StyleCop.CSharp.Async.Rules\Examples\MethodEndingWithAsyncMustHaveAsyncModifierExample.cs(7,10,9,10): warning : AR0001 : CSharp.Async. : Methods whose name end with an Async suffix must use the async modifier (p.Ex. public async Task ExecuteAsync()). [C:\development\StyleCop.CSharp.Async.Rules\Examples\Examples.csproj]
+C:\development\StyleCop.CSharp.Async.Rules\Examples\MethodEndingWithAsyncMustHaveAsyncModifierExample.cs(7,1): warning : SA1600 : CSharp.Documentation : The method must have a documentation header. [C:\development\StyleCop.CSharp.Async.Rules\Examples\Examples.csproj]
+C:\development\StyleCop.CSharp.Async.Rules\Examples\MethodEndingWithAsyncMustHaveAsyncModifierExample.cs(11,1): warning : SA1600 : CSharp.Documentation : The method must have a documentation header. [C:\development\StyleCop.CSharp.Async.Rules\Examples\Examples.csproj]
+C:\development\StyleCop.CSharp.Async.Rules\Examples\MethodsWithAsyncModifierMustEndWithAsyncExample.cs(1,1): warning : SA1633 : CSharp.Documentation : The file has no header, the header Xml is invalid, or the header is not located at the top of the file. [C:\development\StyleCop.CSharp.Async.Rules\Examples\Examples.csproj]
+C:\development\StyleCop.CSharp.Async.Rules\Examples\MethodsWithAsyncModifierMustEndWithAsyncExample.cs(5,1): warning : SA1600 : CSharp.Documentation : The class must have a documentation header. [C:\development\StyleCop.CSharp.Async.Rules\Examples\Examples.csproj]
+C:\development\StyleCop.CSharp.Async.Rules\Examples\MethodsWithAsyncModifierMustEndWithAsyncExample.cs(7,10,10,10): warning : AR0001 : CSharp.Async. : Methods with async modifier (p.Ex. public async Task DoStuffAsync()) must end with Async. [C:\development\StyleCop.CSharp.Async.Rules\Examples\Examples.csproj]
+C:\development\StyleCop.CSharp.Async.Rules\Examples\MethodsWithAsyncModifierMustEndWithAsyncExample.cs(7,1): warning : SA1600 : CSharp.Documentation : The method must have a documentation header. [C:\development\StyleCop.CSharp.Async.Rules\Examples\Examples.csproj]
+C:\development\StyleCop.CSharp.Async.Rules\Examples\MethodsWithAsyncModifierMustEndWithAsyncExample.cs(12,1): warning : SA1600 : CSharp.Documentation : The method must have a documentation header. [C:\development\StyleCop.CSharp.Async.Rules\Examples\Examples.csproj]
+C:\development\StyleCop.CSharp.Async.Rules\Examples\MethodsWithAsyncModifierShouldReturnAwaitableExample.cs(1,1): warning : SA1633 : CSharp.Documentation : The file has no header, the header Xml is invalid, or the header is not located at the top of the file. [C:\development\StyleCop.CSharp.Async.Rules\Examples\Examples.csproj]
+C:\development\StyleCop.CSharp.Async.Rules\Examples\MethodsWithAsyncModifierShouldReturnAwaitableExample.cs(5,1): warning : SA1600 : CSharp.Documentation : The class must have a documentation header. [C:\development\StyleCop.CSharp.Async.Rules\Examples\Examples.csproj]
+C:\development\StyleCop.CSharp.Async.Rules\Examples\MethodsWithAsyncModifierShouldReturnAwaitableExample.cs(7,10,10,10): warning : AR1001 : CSharp.Async. : Methods with async modifier which return void are "fire and forget". They can't be synchronized and exceptions are lost. [C:\development\StyleCop.CSharp.Async.Rules\Examples\Examples.csproj]
+C:\development\StyleCop.CSharp.Async.Rules\Examples\MethodsWithAsyncModifierShouldReturnAwaitableExample.cs(7,1): warning : SA1600 : CSharp.Documentation : The method must have a documentation header. [C:\development\StyleCop.CSharp.Async.Rules\Examples\Examples.csproj]
+C:\development\StyleCop.CSharp.Async.Rules\Examples\MethodsWithAsyncModifierShouldReturnAwaitableExample.cs(12,1): warning : SA1600 : CSharp.Documentation : The method must have a documentation header. [C:\development\StyleCop.CSharp.Async.Rules\Examples\Examples.csproj]
+C:\development\StyleCop.CSharp.Async.Rules\Examples\Properties\AssemblyInfo.cs(1,1): warning : SA1633 : CSharp.Documentation : The file has no header, the header Xml is invalid, or the header is not located at the top of the file. [C:\development\StyleCop.CSharp.Async.Rules\Examples\Examples.csproj]
+  21 violations encountered.
+Done Building Project "C:\development\StyleCop.CSharp.Async.Rules\Examples\Examples.csproj" (Build target(s)).
+
+Build succeeded.
+
+"C:\development\StyleCop.CSharp.Async.Rules\Examples\Examples.csproj" (Build target) (1) ->
+(StyleCop target) -> 
+  C:\development\StyleCop.CSharp.Async.Rules\Examples\CaliburnMicroHandlerException.cs(1,1): warning : SA1633 : CSharp.Documentation : The file has no header, the header Xml is invalid, or the header is not located at the top of the file. [C:\development\StyleCop.CSharp.Async.Rules\Examples\Examples.csproj]
+  C:\development\StyleCop.CSharp.Async.Rules\Examples\CaliburnMicroHandlerException.cs(4,1): warning : SA1208 : CSharp.Ordering : System using directives must be placed before all other using directives. [C:\development\StyleCop.CSharp.Async.Rules\Examples\Examples.csproj]
+  C:\development\StyleCop.CSharp.Async.Rules\Examples\CaliburnMicroHandlerException.cs(6,1): warning : SA1600 : CSharp.Documentation : The class must have a documentation header. [C:\development\StyleCop.CSharp.Async.Rules\Examples\Examples.csproj]
+  C:\development\StyleCop.CSharp.Async.Rules\Examples\CaliburnMicroHandlerException.cs(8,10,11,10): warning : AR0001 : CSharp.Async. : Methods with async modifier (p.Ex. public async Task DoStuffAsync()) must end with Async. [C:\development\StyleCop.CSharp.Async.Rules\Examples\Examples.csproj]
+  C:\development\StyleCop.CSharp.Async.Rules\Examples\CaliburnMicroHandlerException.cs(8,1): warning : SA1600 : CSharp.Documentation : The method must have a documentation header. [C:\development\StyleCop.CSharp.Async.Rules\Examples\Examples.csproj]
+  C:\development\StyleCop.CSharp.Async.Rules\Examples\MethodEndingWithAsyncMustHaveAsyncModifierExample.cs(1,1): warning : SA1633 : CSharp.Documentation : The file has no header, the header Xml is invalid, or the header is not located at the top of the file. [C:\development\StyleCop.CSharp.Async.Rules\Examples\Examples.csproj]
+  C:\development\StyleCop.CSharp.Async.Rules\Examples\MethodEndingWithAsyncMustHaveAsyncModifierExample.cs(5,1): warning : SA1600 : CSharp.Documentation : The class must have a documentation header. [C:\development\StyleCop.CSharp.Async.Rules\Examples\Examples.csproj]
+  C:\development\StyleCop.CSharp.Async.Rules\Examples\MethodEndingWithAsyncMustHaveAsyncModifierExample.cs(7,10,9,10): warning : AR0001 : CSharp.Async. : Methods whose name end with an Async suffix must use the async modifier (p.Ex. public async Task ExecuteAsync()). [C:\development\StyleCop.CSharp.Async.Rules\Examples\Examples.csproj]
+  C:\development\StyleCop.CSharp.Async.Rules\Examples\MethodEndingWithAsyncMustHaveAsyncModifierExample.cs(7,1): warning : SA1600 : CSharp.Documentation : The method must have a documentation header. [C:\development\StyleCop.CSharp.Async.Rules\Examples\Examples.csproj]
+  C:\development\StyleCop.CSharp.Async.Rules\Examples\MethodEndingWithAsyncMustHaveAsyncModifierExample.cs(11,1): warning : SA1600 : CSharp.Documentation : The method must have a documentation header. [C:\development\StyleCop.CSharp.Async.Rules\Examples\Examples.csproj]
+  C:\development\StyleCop.CSharp.Async.Rules\Examples\MethodsWithAsyncModifierMustEndWithAsyncExample.cs(1,1): warning : SA1633 : CSharp.Documentation : The file has no header, the header Xml is invalid, or the header is not located at the top of the file. [C:\development\StyleCop.CSharp.Async.Rules\Examples\Examples.csproj]
+  C:\development\StyleCop.CSharp.Async.Rules\Examples\MethodsWithAsyncModifierMustEndWithAsyncExample.cs(5,1): warning : SA1600 : CSharp.Documentation : The class must have a documentation header. [C:\development\StyleCop.CSharp.Async.Rules\Examples\Examples.csproj]
+  C:\development\StyleCop.CSharp.Async.Rules\Examples\MethodsWithAsyncModifierMustEndWithAsyncExample.cs(7,10,10,10): warning : AR0001 : CSharp.Async. : Methods with async modifier (p.Ex. public async Task DoStuffAsync()) must end with Async. [C:\development\StyleCop.CSharp.Async.Rules\Examples\Examples.csproj]
+  C:\development\StyleCop.CSharp.Async.Rules\Examples\MethodsWithAsyncModifierMustEndWithAsyncExample.cs(7,1): warning : SA1600 : CSharp.Documentation : The method must have a documentation header. [C:\development\StyleCop.CSharp.Async.Rules\Examples\Examples.csproj]
+  C:\development\StyleCop.CSharp.Async.Rules\Examples\MethodsWithAsyncModifierMustEndWithAsyncExample.cs(12,1): warning : SA1600 : CSharp.Documentation : The method must have a documentation header. [C:\development\StyleCop.CSharp.Async.Rules\Examples\Examples.csproj]
+  C:\development\StyleCop.CSharp.Async.Rules\Examples\MethodsWithAsyncModifierShouldReturnAwaitableExample.cs(1,1): warning : SA1633 : CSharp.Documentation : The file has no header, the header Xml is invalid, or the header is not located at the top of the file. [C:\development\StyleCop.CSharp.Async.Rules\Examples\Examples.csproj]
+  C:\development\StyleCop.CSharp.Async.Rules\Examples\MethodsWithAsyncModifierShouldReturnAwaitableExample.cs(5,1): warning : SA1600 : CSharp.Documentation : The class must have a documentation header. [C:\development\StyleCop.CSharp.Async.Rules\Examples\Examples.csproj]
+  C:\development\StyleCop.CSharp.Async.Rules\Examples\MethodsWithAsyncModifierShouldReturnAwaitableExample.cs(7,10,10,10): warning : AR1001 : CSharp.Async. : Methods with async modifier which return void are "fire and forget". They can't be synchronized and exceptions are lost. [C:\development\StyleCop.CSharp.Async.Rules\Examples\Examples.csproj]
+  C:\development\StyleCop.CSharp.Async.Rules\Examples\MethodsWithAsyncModifierShouldReturnAwaitableExample.cs(7,1): warning : SA1600 : CSharp.Documentation : The method must have a documentation header. [C:\development\StyleCop.CSharp.Async.Rules\Examples\Examples.csproj]
+done
+  C:\development\StyleCop.CSharp.Async.Rules\Examples\MethodsWithAsyncModifierShouldReturnAwaitableExample.cs(12,1): warning : SA1600 : CSharp.Documentation : The method must have a documentation header. [C:\development\StyleCop.CSharp.Async.Rules\Examples\Examples.csproj]
+  C:\development\StyleCop.CSharp.Async.Rules\Examples\Properties\AssemblyInfo.cs(1,1): warning : SA1633 : CSharp.Documentation : The file has no header, the header Xml is invalid, or the header is not located at the top of the file. [C:\development\StyleCop.CSharp.Async.Rules\Examples\Examples.csproj]
+
+    21 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.25
+
+

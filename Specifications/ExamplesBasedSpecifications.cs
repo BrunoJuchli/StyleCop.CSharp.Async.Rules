@@ -1,4 +1,5 @@
-﻿using Machine.Specifications;
+﻿using System;
+using Machine.Specifications;
 using System.IO;
 using System.Linq;
 
@@ -19,7 +20,9 @@ namespace Specifications
 
         Because of = () =>
         {
-            MsBuildRunner.BuildProject(examplesProjectFilePath);
+            var warningsGatherer = new StyleCopWarningGatheringProcessOutputHandler();
+            MsBuildRunner.BuildProject(examplesProjectFilePath, warningsGatherer);
+            Console.WriteLine("done");
         };
 
         It should_not_fail = () =>
