@@ -1,4 +1,4 @@
-﻿namespace StyleCop.CSharp.Async.Rules
+﻿namespace StyleCop.CSharp
 {
     public static class MethodExtensions
     {

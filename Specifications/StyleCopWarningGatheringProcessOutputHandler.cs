@@ -1,15 +1,36 @@
 ﻿using System;
-using System.Diagnostics;
-using System.Linq;
 
 namespace Specifications
 {
+    using System.Collections.Generic;
+    using System.Diagnostics;
+    using System.Linq;
+
     public class StyleCopWarningGatheringProcessOutputHandler : IProcessOutputHandler
     {
+        private readonly List<StyleCopBuildWarning> _buildWarnings = new List<StyleCopBuildWarning>();
+
         public void HandleOutput(DataReceivedEventArgs e)
         {
-            Console.WriteLine(e.Data);
+            //Console.WriteLine(e.Data);
 
+            try
+            {
+                ProcessData(e);
+            }
+            catch (Exception ex) // this is ugly, but throwing an exception here will block the build process for ever
+            {
+                Console.Error.WriteLine("unhandled error in msbuild process output handler");
+                Console.Error.WriteLine(ex);
+            }
+        }
+
+        public void HandleError(DataReceivedEventArgs e)
+        {
+        }
+
+        private void ProcessData(DataReceivedEventArgs e)
+        {
             if (string.IsNullOrEmpty(e.Data))
             {
                 return;
@@ -24,17 +45,15 @@ namespace Specifications
             //: warning : catches only stylecop warnings.
             //"normal" CS warnings look like : warning CS1030:
             //"stylecop" warning look like : warning : SAXXX : ,...
-            int warningIndex = e.Data.IndexOf(": warning :");
-            if (warningIndex > 0)
+            if (e.Data.Contains(": warning :"))
             {
-                //Console.WriteLine(e.Data);
+                this._buildWarnings.Add(StyleCopBuildWarningParser.Create(e.Data));
             }
         }
 
-        public void HandleError(DataReceivedEventArgs e)
+        public IReadOnlyCollection<StyleCopBuildWarning> ParsedWarnings
         {
+            get { return this._buildWarnings; }
         }
-
-
     }
 }

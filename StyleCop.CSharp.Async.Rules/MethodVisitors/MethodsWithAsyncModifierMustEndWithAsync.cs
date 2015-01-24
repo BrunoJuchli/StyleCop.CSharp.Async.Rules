@@ -1,7 +1,7 @@
-﻿namespace StyleCop.CSharp.Async.Rules.MethodVisitors
-{
-    using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
+namespace StyleCop.CSharp.MethodVisitors
+{
     internal class MethodsWithAsyncModifierMustEndWithAsync : IMethodVisitor
     {
         public IEnumerable<MethodViolationData> Visit(Method method)

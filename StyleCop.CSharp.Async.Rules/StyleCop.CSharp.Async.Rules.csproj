@@ -7,7 +7,7 @@
     <ProjectGuid>{B1CD5431-B353-4C0C-A372-97BE0BF88255}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>StyleCop.CSharp.Async.Rules</RootNamespace>
+    <RootNamespace>StyleCop.CSharp</RootNamespace>
     <AssemblyName>StyleCop.CSharp.Async.Rules</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -37,6 +37,9 @@
     <Reference Include="StyleCop.CSharp">
       <HintPath>..\packages\StyleCop.MSBuild.4.7.49.0\tools\StyleCop.CSharp.dll</HintPath>
     </Reference>
+    <Reference Include="StyleCop.CSharp.Rules">
+      <HintPath>..\packages\StyleCop.MSBuild.4.7.49.0\tools\StyleCop.CSharp.Rules.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -45,7 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AsyncAwaitAnalyzer.cs" />
+    <Compile Include="AsyncRules.cs" />
     <Compile Include="IMethodVisitor.cs" />
     <Compile Include="MethodExtensions.cs" />
     <Compile Include="MethodVisitors\MethodEndingWithAsyncMustHaveAsyncModifier.cs" />
@@ -59,7 +62,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AsyncAwaitAnalyzer.xml" />
+    <EmbeddedResource Include="AsyncRules.xml" />
     <Content Include="Notes.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -15,10 +15,12 @@ namespace Specifications
 
         public static void BuildProject(string projectFilePath, IProcessOutputHandler outputHandler)
         {
+
+
             var startInfo = new ProcessStartInfo
             {
                 FileName = MsBuildPath,
-                Arguments = projectFilePath + " /t:Build",
+                Arguments = projectFilePath + " /t:\"Clean;Build\"", // todo fix argument. Previously it was /t:Build. But we need a clean to proceed it.
                 CreateNoWindow = true,
                 WindowStyle = ProcessWindowStyle.Hidden,
                 UseShellExecute = false,

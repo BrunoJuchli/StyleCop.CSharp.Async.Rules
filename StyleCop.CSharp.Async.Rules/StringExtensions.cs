@@ -1,4 +1,4 @@
-﻿namespace StyleCop.CSharp.Async.Rules
+﻿namespace StyleCop.CSharp
 {
     internal static class StringExtensions
     {
