@@ -68,6 +68,10 @@
     <Content Include="ExemplarMSBuildStandardOutput.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Examples\Examples.csproj">
+      <Project>{f02334e1-4ce1-4a03-9f82-1c8b16e94c1c}</Project>
+      <Name>Examples</Name>
+    </ProjectReference>
     <ProjectReference Include="..\StyleCop.CSharp.Async.Rules\StyleCop.CSharp.Async.Rules.csproj">
       <Project>{b1cd5431-b353-4c0c-a372-97be0bf88255}</Project>
       <Name>StyleCop.CSharp.Async.Rules</Name>

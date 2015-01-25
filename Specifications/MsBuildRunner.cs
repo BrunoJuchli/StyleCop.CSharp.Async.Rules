@@ -20,7 +20,7 @@ namespace Specifications
             var startInfo = new ProcessStartInfo
             {
                 FileName = MsBuildPath,
-                Arguments = projectFilePath + " /t:\"Clean;Build\"", // todo fix argument. Previously it was /t:Build. But we need a clean to proceed it.
+                Arguments = projectFilePath + " /t:Clean;Build",
                 CreateNoWindow = true,
                 WindowStyle = ProcessWindowStyle.Hidden,
                 UseShellExecute = false,

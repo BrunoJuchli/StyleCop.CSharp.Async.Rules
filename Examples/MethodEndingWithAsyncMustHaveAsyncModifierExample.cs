@@ -2,13 +2,13 @@
 {
     using System.Threading.Tasks;
 
-    public class MethodEndingWithAsyncMustHaveAsyncModifierExample
+    public static class MethodEndingWithAsyncMustHaveAsyncModifierExample
     {
-        public void InvalidAsync()
+        public static void InvalidAsync()
         {
         }
 
-        public async Task ValidAsync()
+        public static async Task ValidAsync()
         {
             await Task.Delay(0);
         }
