@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CaliburnMicroHandlerException.cs" />
+    <Compile Include="IInterfaceWithAsyncMethod.cs" />
     <Compile Include="MethodEndingWithAsyncMustHaveAsyncModifierExample.cs" />
     <Compile Include="MethodsWithAsyncModifierMustEndWithAsyncExample.cs" />
     <Compile Include="MethodsWithAsyncModifierShouldReturnAwaitableExample.cs" />

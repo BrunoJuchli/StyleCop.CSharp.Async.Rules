@@ -77,6 +77,7 @@
     <Compile Include="Rules\RulesRegistry.cs" />
     <Compile Include="Utilities\GenericKeyedCollection.cs" />
     <Compile Include="Utilities\Reflector.cs" />
+    <Compile Include="When_interface_has_method_with_async_suffix.cs" />
     <Compile Include="When_method_has_async_modifier.cs" />
     <Compile Include="When_method_has_Async_suffix.cs" />
     <Compile Include="MSBuild\StyleCopBuildWarning.cs" />
