@@ -1,4 +1,4 @@
-﻿namespace Specifications
+﻿namespace Specifications.Utilities
 {
     using System;
     using System.Collections.ObjectModel;

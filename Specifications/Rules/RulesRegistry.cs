@@ -1,4 +1,6 @@
-﻿namespace Specifications.Rules
+﻿using Specifications.Utilities;
+
+namespace Specifications.Rules
 {
     using StyleCop.CSharp;
     using System;

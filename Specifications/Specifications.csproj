@@ -43,6 +43,21 @@
     <Reference Include="Machine.Specifications.Clr4">
       <HintPath>..\packages\Machine.Specifications.0.9.1\lib\net45\Machine.Specifications.Clr4.dll</HintPath>
     </Reference>
+    <Reference Include="Mono.Cecil">
+      <HintPath>..\packages\Mono.Cecil.0.9.5.4\lib\net40\Mono.Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil.Mdb">
+      <HintPath>..\packages\Mono.Cecil.0.9.5.4\lib\net40\Mono.Cecil.Mdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil.Pdb">
+      <HintPath>..\packages\Mono.Cecil.0.9.5.4\lib\net40\Mono.Cecil.Pdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil.Rocks">
+      <HintPath>..\packages\Mono.Cecil.0.9.5.4\lib\net40\Mono.Cecil.Rocks.dll</HintPath>
+    </Reference>
+    <Reference Include="Seterlund.CodeGuard">
+      <HintPath>..\packages\Seterlund.CodeGuard.2.3.4\lib\net40\Seterlund.CodeGuard.dll</HintPath>
+    </Reference>
     <Reference Include="StyleCop, Version=4.7.1000.0, Culture=neutral, PublicKeyToken=f904653c63bc2738, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\StyleCop.MSBuild.4.7.49.0\tools\StyleCop.dll</HintPath>
@@ -56,10 +71,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SourceLineFinder.cs" />
     <Compile Include="Rules\RulesReader.cs" />
     <Compile Include="Rules\RuleInfo.cs" />
     <Compile Include="Rules\RulesRegistry.cs" />
     <Compile Include="Utilities\GenericKeyedCollection.cs" />
+    <Compile Include="Utilities\Reflector.cs" />
+    <Compile Include="When_method_has_async_modifier.cs" />
     <Compile Include="When_method_has_Async_suffix.cs" />
     <Compile Include="MSBuild\StyleCopBuildWarning.cs" />
     <Compile Include="MSBuild\StyleCopBuildWarningParser.cs" />
