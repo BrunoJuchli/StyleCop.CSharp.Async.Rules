@@ -4,6 +4,11 @@ Additional StyleCop rules for `async / await` style programming.
 
 ## Rules
 
+The following examples will result in StyleCop warnings:
+- `async void DoSomethingAsync()` --> method should return awaitable instead of void
+- `async Task DoSomething()` --> method should be named  `DoSomethingAsync`
+- `Task DoSomethingAsync()` --> method should have `async` modifier
+
 ### Methods with `async` modifier must end with `Async` (**AR0001:MethodsWithAsyncModifierMustEndWithAsync**)
 
 Violated when an `async` method is named `Foo()` instead of `FooAsync()`.
