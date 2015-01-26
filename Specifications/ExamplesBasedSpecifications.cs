@@ -1,14 +1,14 @@
-﻿using System;
-using FluentAssertions;
-using Machine.Specifications;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using Specifications.MSBuild;
-using Specifications.Rules;
-
-namespace Specifications
+﻿namespace Specifications
 {
+    using System;
+    using System.Collections.Generic;
+    using System.IO;
+    using System.Linq;
+    using FluentAssertions;
+    using Machine.Specifications;
+    using MSBuild;
+    using Rules;
+
     [Subject("Example based Specifications")]
     public class ExamplesBasedSpecifications
     {
@@ -26,6 +26,7 @@ namespace Specifications
                 var warningsGatherer = new StyleCopWarningGatheringProcessOutputHandler();
                 MsBuildRunner.BuildProject(examplesProjectFilePath, warningsGatherer);
                 StyleCopBuildWarnings = warningsGatherer.ParsedWarnings;
+                hasBuildBeenRun = true;
             }
         };
 
@@ -50,8 +51,6 @@ namespace Specifications
             return projectFiles.Single().FullName;
         }
 
-        // todo get method name / line number by reflection:
-        // would mean we'd need to include full details in PDB also in release mode. Also would need to parse PDB.
         private static IEnumerable<StyleCopBuildWarning> GetWarningsFor(Type rule, string fileName, int line)
         {
             string checkId = RulesRegistry.Rules[rule].CheckId;

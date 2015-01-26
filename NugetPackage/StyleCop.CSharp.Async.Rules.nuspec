@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+	<metadata minClientVersion="2.8">
+		<id>StyleCop.CSharp.Async.Rules</id>
+		<version>$version$</version>
+		<title>StyleCop.CSharp.Async.Rules</title>
+		<authors>Bruno Juchli</authors>
+		<owners>Bruno Juchli</owners>
+		<developmentDependency>true</developmentDependency>
+		<projectUrl>https://github.com/BrunoJuchli/StyleCop.CSharp.Async.Rules/</projectUrl>
+		<!--<iconUrl>https://github.com/BrunoJuchli/StaticProxy.Fody/tree/master/Icons/package_icon.png</iconUrl>-->
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<description>Additional stylecop rules for the async / await c# features.</description>
+		<copyright>Copyright Bruno Juchli 2015</copyright>
+		<tags>StyleCop Async TPL await</tags>
+	</metadata>
+	<files>
+		<file src="..\StyleCop.CSharp.Async.Rules\bin\$configuration$\StyleCop.CSharp.Async.Rules*" target="tools" />
+		<file src="build\*" target="build" />
+	</files>
+</package>
