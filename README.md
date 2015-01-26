@@ -3,13 +3,30 @@
 Additional StyleCop rules for `async / await` style programming.
 
 ## Rules
-
 The following examples will result in StyleCop warnings:
 - `async void DoSomethingAsync()` --> method should return awaitable instead of void
 - `async Task DoSomething()` --> method should be named  `DoSomethingAsync`
 - `Task DoSomethingAsync()` --> method should have `async` modifier
 
-### Methods with `async` modifier must end with `Async` (**AR0001:MethodsWithAsyncModifierMustEndWithAsync**)
+## Installing
+#### By Nuget
+If you have StyleCop integrated into your build already, just install the nuget package [StyleCop.CSharp.Async.Rules](https://www.nuget.org/packages/StyleCop.CSharp.Async.Rules/) in all projects you the rules active in. If you don't have installed StyleCop yet, i'd recommend installing the [StyleCop.MsBuild](https://www.nuget.org/packages/StyleCop.MSBuild/), too.
+#### Manually
+The rules-dll (StyleCop.CSharp.Async.Rules.dll) is available on the [build server](https://ci.appveyor.com/project/BrunoJuchli/stylecop-csharp-async-rules)(see **Artifacts**).
+You can place it alongside the StyleCop.dll and StyleCop will automatically pick it up.
+Alternatively, you can also tell StyleCop where to pick it up by defining an `StyleCopAdditionalAddinPaths` item in the *.csproj file:
+
+  <ItemGroup>
+    <StyleCopAdditionalAddinPaths Include="..\StyleCop.CSharp.Async.Rules\">
+		<Visible>false</Visible>
+	</StyleCopAdditionalAddinPaths>
+  </ItemGroup>
+
+## Rule Description
+## Info on how to Suppress or Disable Them
+
+### Methods with `async` modifier must end with `Async`
+(**AR0001:MethodsWithAsyncModifierMustEndWithAsync**)
 
 Violated when an `async` method is named `Foo()` instead of `FooAsync()`.
 ##### Suppress specific warning / occurrence in code
