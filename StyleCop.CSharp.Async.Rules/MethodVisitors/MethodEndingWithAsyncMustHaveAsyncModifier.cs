@@ -10,9 +10,23 @@
             {
                 if (!method.IsAsyncMethod())
                 {
-                    yield return new MethodViolationData();
+                    if (!IsPartOfInterface(method))
+                    {
+                        yield return new MethodViolationData();
+                    }
                 }
             }
+        }
+
+        private bool IsPartOfInterface(Method method)
+        {
+            ICodePart current = method.Parent;
+            while (!(current is ClassBase))
+            {
+                current = current.Parent;
+            }
+
+            return current is Interface;
         }
     }
 }

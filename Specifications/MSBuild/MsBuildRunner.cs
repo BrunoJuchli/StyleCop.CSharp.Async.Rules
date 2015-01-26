@@ -21,7 +21,7 @@ namespace Specifications.MSBuild
             var startInfo = new ProcessStartInfo
             {
                 FileName = MsBuildPath,
-                Arguments = projectFilePath + " /t:Clean;Build",
+                Arguments = projectFilePath + " /t:Clean;Build /nr:false /property:WithAsyncRules=TRUE", ///nr:false makes sure msbuild process ends and files are unlocked once build is done.
                 CreateNoWindow = true,
                 WindowStyle = ProcessWindowStyle.Hidden,
                 UseShellExecute = false,

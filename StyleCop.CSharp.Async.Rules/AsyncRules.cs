@@ -1,5 +1,4 @@
-﻿
-namespace StyleCop.CSharp
+﻿namespace StyleCop.CSharp
 {
     using MethodVisitors;
     using System.Collections.Generic;
