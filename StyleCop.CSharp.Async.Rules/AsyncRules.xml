@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SourceAnalyzer Name="StyleCop.CSharp.AsyncRules">
+  <Description>StyleCop rules for async/await</Description>
+  <Rules>
+    <RuleGroup Name="Implementation">
+      <Rule Name="MethodsWithAsyncModifierMustEndWithAsync" CheckId="AR0001">
+        <Context>Methods with async modifier (p.Ex. public async Task DoStuffAsync()) must end with Async.</Context>
+        <Description>Fires when an async method is named Foo() instead of FooAsync().</Description>
+      </Rule>
+      <Rule Name="MethodEndingWithAsyncMustHaveAsyncModifier" CheckId="AR0001">
+        <Context>Methods whose name end with an Async suffix must use the async modifier (p.Ex. public async Task ExecuteAsync()).</Context>
+        <Description>Fires when a method is named FooAsync() but is missing the async modifier.</Description>
+      </Rule>
+      <Rule Name="MethodsWithAsyncModifierShouldReturnAwaitable" CheckId="AR1001">
+        <Context>Methods with async modifier which return void are "fire and forget". They can't be synchronized and exceptions are lost.</Context>
+        <Description>Fires when a method with async modifier is returning void.</Description>
+      </Rule>
+    </RuleGroup>
+  </Rules>
+</SourceAnalyzer>

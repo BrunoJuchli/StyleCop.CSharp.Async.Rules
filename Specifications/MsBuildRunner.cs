@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
 using System.Security.AccessControl;
+using System.Xml;
 
 namespace Specifications
 {
@@ -89,13 +90,15 @@ namespace Specifications
 
         private static double? TryParse(string s)
         {
-            double d;
-            if (double.TryParse(s, out d))
+            try
             {
-                return d;
+                // XmlConvert.ToDouble always uses a dot (`.`) as decimal separator.
+                return XmlConvert.ToDouble(s);
             }
-
-            return null;
+            catch (FormatException ex)
+            {
+                return null;
+            }
         }
     }
 }
