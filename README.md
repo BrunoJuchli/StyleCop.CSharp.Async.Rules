@@ -27,11 +27,11 @@ Alternatively, you can also tell StyleCop where to pick it up by defining an `St
 
 ## Rule Description, Supression, Disabling
 
-### Methods with `async` modifier must end with `Async`
+#### Methods with `async` modifier must end with `Async`
 (**AR0001:MethodsWithAsyncModifierMustEndWithAsync**)
 
 Violated when an `async` method is named `Foo()` instead of `FooAsync()`.
-##### Suppress specific warning / occurrence in code
+###### Suppress specific warning / occurrence in code
 
     [SuppressMessage(
       "StyleCop.CSharp.AsyncRules",
@@ -39,7 +39,7 @@ Violated when an `async` method is named `Foo()` instead of `FooAsync()`.
       Justification = "Yipii-ai-ei-oh")]
     async Task DoSomething() { }
 
-##### Disable in `Settings.StyleCop` file
+###### Disable in `Settings.StyleCop` file
 
     <Analyzer AnalyzerId="StyleCop.CSharp.AsyncRules">
       <Rules>
@@ -51,12 +51,12 @@ Violated when an `async` method is named `Foo()` instead of `FooAsync()`.
       </Rules>
     </Analyzer>
     
-### Methods ending with `Async` must have `async` modifier
+#### Methods ending with `Async` must have `async` modifier
 (**AR0002:MethodEndingWithAsyncMustHaveAsyncModifier**)
 
 Violated when a method named `FooAsync` does not have the `async` modifier.
 
-##### Suppress specific warning / occurrence in code
+###### Suppress specific warning / occurrence in code
 
     [SuppressMessage(
       "StyleCop.CSharp.AsyncRules",
@@ -64,7 +64,7 @@ Violated when a method named `FooAsync` does not have the `async` modifier.
       Justification = "doesn't need the async modifier")]
     Task FooAsync() { }
 
-##### Disable in `Settings.StyleCop` file
+###### Disable in `Settings.StyleCop` file
 
     <Analyzer AnalyzerId="StyleCop.CSharp.AsyncRules">
       <Rules>
@@ -76,12 +76,12 @@ Violated when a method named `FooAsync` does not have the `async` modifier.
       </Rules>
     </Analyzer>
     
-### Methods with `async` modifier must return awaitable
+#### Methods with `async` modifier must return awaitable
 (**AR1001:MethodsWithAsyncModifierShouldReturnAwaitable**)
 
 Violated when a method  `async void FooAsync()` returns void instead of `Task` or another awaitable type.
 
-##### Suppress specific warning / occurrence in code
+###### Suppress specific warning / occurrence in code
 
     [SuppressMessage(
       "StyleCop.CSharp.AsyncRules",
@@ -89,7 +89,7 @@ Violated when a method  `async void FooAsync()` returns void instead of `Task` o
       Justification = "event handler :))]
     async void HandleEventAsync() { }
 
-##### Disable in `Settings.StyleCop` file
+###### Disable in `Settings.StyleCop` file
 
     <Analyzer AnalyzerId="StyleCop.CSharp.AsyncRules">
       <Rules>
