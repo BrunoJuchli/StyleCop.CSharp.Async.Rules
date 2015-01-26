@@ -49,8 +49,10 @@ namespace Specifications
 
         private static IEnumerable<StyleCopBuildWarning> GetWarningsFor(string checkId, string fileName, int line)
         {
-            return StyleCopBuildWarnings
-                .Where(x => x.CheckId == checkId)
+            var warningsMatchingCheckId = StyleCopBuildWarnings
+                .Where(x => x.CheckId == checkId);
+                
+            return warningsMatchingCheckId
                 .Where(x => x.File.Contains(fileName))
                 .Where(x => x.Line == line);
         }

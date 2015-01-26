@@ -1,6 +1,6 @@
 ﻿namespace StyleCop.CSharp
 {
-    public static class MethodExtensions
+    internal static class MethodExtensions
     {
         public static bool IsAsyncMethod(this Method method)
         {

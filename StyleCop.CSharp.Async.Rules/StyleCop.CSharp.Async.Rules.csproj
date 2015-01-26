@@ -62,7 +62,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AsyncRules.xml" />
+    <EmbeddedResource Include="AsyncRules.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <Content Include="Notes.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,4 +1,5 @@
-﻿namespace StyleCop.CSharp
+﻿
+namespace StyleCop.CSharp
 {
     using MethodVisitors;
     using System.Collections.Generic;
@@ -7,7 +8,7 @@
     [SourceAnalyzer(typeof(CsParser))]
     public class AsyncRules : SourceAnalyzer
     {
-        private readonly ICollection<MethodVisitorInfo> methodVisitors;
+        private readonly IEnumerable<MethodVisitorInfo> methodVisitors;
 
         public AsyncRules()
         {

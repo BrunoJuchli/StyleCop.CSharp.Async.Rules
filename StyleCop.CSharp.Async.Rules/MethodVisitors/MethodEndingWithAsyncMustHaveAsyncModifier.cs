@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
-
-namespace StyleCop.CSharp.MethodVisitors
+﻿namespace StyleCop.CSharp.MethodVisitors
 {
+    using System.Collections.Generic;
+
     internal class MethodEndingWithAsyncMustHaveAsyncModifier : IMethodVisitor
     {
         public IEnumerable<MethodViolationData> Visit(Method method)
@@ -10,7 +10,7 @@ namespace StyleCop.CSharp.MethodVisitors
             {
                 if (!method.IsAsyncMethod())
                 {
-                    yield return new MethodViolationData(method);
+                    yield return new MethodViolationData();
                 }
             }
         }

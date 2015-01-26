@@ -95,7 +95,7 @@ namespace Specifications
                 // XmlConvert.ToDouble always uses a dot (`.`) as decimal separator.
                 return XmlConvert.ToDouble(s);
             }
-            catch (FormatException ex)
+            catch (FormatException)
             {
                 return null;
             }

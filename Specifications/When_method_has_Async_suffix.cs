@@ -1,11 +1,11 @@
-﻿using Examples;
-using Machine.Specifications;
-
-namespace Specifications
+﻿namespace Specifications
 {
-    public class MethodEndingWithAsyncMustHaveAsyncModifierSpecification : ExamplesBasedSpecifications
+    using Examples;
+    using Machine.Specifications;
+
+    public class When_method_has_Async_suffix : ExamplesBasedSpecifications
     {
-        private static readonly string CheckId = typeof(MethodEndingWithAsyncMustHaveAsyncModifierSpecification).Name;
+        private const string CheckId = "AR0001";
 
         // todo generate file name (well without full path?!) from type (Name, Namespace,.. Project name?)
         private static readonly string FileName = typeof(MethodEndingWithAsyncMustHaveAsyncModifierExample).Name;

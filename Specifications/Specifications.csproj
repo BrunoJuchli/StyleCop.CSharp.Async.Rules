@@ -51,7 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MethodEndingWithAsyncMustHaveAsyncModifierSpecification.cs" />
+    <Compile Include="When_method_has_Async_suffix.cs" />
     <Compile Include="StyleCopBuildWarning.cs" />
     <Compile Include="StyleCopBuildWarningParser.cs" />
     <Compile Include="ExamplesBasedSpecifications.cs" />
