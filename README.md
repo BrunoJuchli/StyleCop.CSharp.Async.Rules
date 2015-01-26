@@ -11,20 +11,21 @@ The following examples will result in StyleCop warnings:
 
 ## Installing
 #### By Nuget
-If you have StyleCop integrated into your build already, just install the nuget package [StyleCop.CSharp.Async.Rules](https://www.nuget.org/packages/StyleCop.CSharp.Async.Rules/) in all projects you the rules active in. If you don't have installed StyleCop yet, i'd recommend installing the [StyleCop.MsBuild](https://www.nuget.org/packages/StyleCop.MSBuild/), too.
+If you have StyleCop integrated into your build already, just install the nuget package [StyleCop.CSharp.Async.Rules](https://www.nuget.org/packages/StyleCop.CSharp.Async.Rules/) in all projects you want to be verified.
+
+If you don't have installed StyleCop yet, i'd recommend installing the [StyleCop.MsBuild](https://www.nuget.org/packages/StyleCop.MSBuild/), too.
 #### Manually
 The rules-dll (StyleCop.CSharp.Async.Rules.dll) is available on the [build server](https://ci.appveyor.com/project/BrunoJuchli/stylecop-csharp-async-rules)(see **Artifacts**).
 You can place it alongside the StyleCop.dll and StyleCop will automatically pick it up.
 Alternatively, you can also tell StyleCop where to pick it up by defining an `StyleCopAdditionalAddinPaths` item in the *.csproj file:
 
-  <ItemGroup>
-    <StyleCopAdditionalAddinPaths Include="..\StyleCop.CSharp.Async.Rules\">
-		<Visible>false</Visible>
-	</StyleCopAdditionalAddinPaths>
-  </ItemGroup>
+    <ItemGroup>
+      <StyleCopAdditionalAddinPaths Include="..\StyleCop.CSharp.Async.Rules\">
+        <Visible>false</Visible>
+      </StyleCopAdditionalAddinPaths>
+    </ItemGroup>
 
-## Rule Description
-## Info on how to Suppress or Disable Them
+## Rule Description, Supression, Disabling
 
 ### Methods with `async` modifier must end with `Async`
 (**AR0001:MethodsWithAsyncModifierMustEndWithAsync**)
