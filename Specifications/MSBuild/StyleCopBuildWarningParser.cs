@@ -1,5 +1,5 @@
 ﻿
-namespace Specifications
+namespace Specifications.MSBuild
 {
     public static class StyleCopBuildWarningParser
     {

@@ -1,8 +1,11 @@
-﻿using FluentAssertions;
+﻿using System;
+using FluentAssertions;
 using Machine.Specifications;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using Specifications.MSBuild;
+using Specifications.Rules;
 
 namespace Specifications
 {
@@ -26,15 +29,15 @@ namespace Specifications
             }
         };
 
-        protected static void ShouldHaveWarningFor(string checkId, string fileName, int line)
+        protected static void ShouldHaveWarningFor(Type rule, string fileName, int line)
         {
-            GetWarningsFor(checkId, fileName, line)
+            GetWarningsFor(rule, fileName, line)
                 .Should().HaveCount(1);
         }
 
-        protected static void ShouldNotHaveWarningFor(string checkId, string fileName, int line)
+        protected static void ShouldNotHaveWarningFor(Type rule, string fileName, int line)
         {
-            GetWarningsFor(checkId, fileName, line)
+            GetWarningsFor(rule, fileName, line)
                 .Should().BeEmpty();
         }
 
@@ -47,8 +50,12 @@ namespace Specifications
             return projectFiles.Single().FullName;
         }
 
-        private static IEnumerable<StyleCopBuildWarning> GetWarningsFor(string checkId, string fileName, int line)
+        // todo get method name / line number by reflection:
+        // would mean we'd need to include full details in PDB also in release mode. Also would need to parse PDB.
+        private static IEnumerable<StyleCopBuildWarning> GetWarningsFor(Type rule, string fileName, int line)
         {
+            string checkId = RulesRegistry.Rules[rule].CheckId;
+
             var warningsMatchingCheckId = StyleCopBuildWarnings
                 .Where(x => x.CheckId == checkId);
                 

@@ -6,7 +6,7 @@ using System.Linq;
 using System.Security.AccessControl;
 using System.Xml;
 
-namespace Specifications
+namespace Specifications.MSBuild
 {
     internal class MsBuildRunner
     {

@@ -1,4 +1,4 @@
-﻿namespace Specifications
+﻿namespace Specifications.MSBuild
 {
     public class StyleCopBuildWarning
     {

@@ -1,11 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
 
-namespace Specifications
+namespace Specifications.MSBuild
 {
-    using System.Collections.Generic;
-    using System.Diagnostics;
-    using System.Linq;
-
     public class StyleCopWarningGatheringProcessOutputHandler : IProcessOutputHandler
     {
         private readonly List<StyleCopBuildWarning> _buildWarnings = new List<StyleCopBuildWarning>();
