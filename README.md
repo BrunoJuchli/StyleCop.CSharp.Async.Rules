@@ -1,12 +1,13 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/4k5lqfrunfd51g6y/branch/master?svg=true)](https://ci.appveyor.com/project/BrunoJuchli/stylecop-csharp-async-rules/branch/master)
 # StyleCop.CSharp.Async.Rules
 Additional StyleCop rules for `async / await` style programming.
-
-## Rules
 The following examples will result in StyleCop warnings:
-- `async void DoSomethingAsync()` --> method should return awaitable instead of void
-- `async Task DoSomething()` --> method should be named  `DoSomethingAsync`
-- `Task DoSomethingAsync()` --> method should have `async` modifier
+- **`async void DoSomethingAsync()` --> method should return awaitable instead of void**
+ - see [Stephen Cleary](https://msdn.microsoft.com/en-us/magazine/jj991977.aspx), [Phil Haack](http://haacked.com/archive/2014/11/11/async-void-methods/),...
+- **`async Task DoSomething()` --> method should be named  `DoSomethingAsync`**
+ - see [Task-based Asynchronous Pattern (TAP)](https://msdn.microsoft.com/en-us/library/hh873175%28v=vs.110%29.aspx)
+- **`Task DoSomethingAsync()` --> method should have `async` modifier**
+ - see [Task-based Asynchronous Pattern (TAP)](https://msdn.microsoft.com/en-us/library/hh873175%28v=vs.110%29.aspx)
 
 ## Installing
 #### By Nuget
