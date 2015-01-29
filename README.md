@@ -86,7 +86,7 @@ Violated when a method  `async void FooAsync()` returns void instead of `Task` o
     [SuppressMessage(
       "StyleCop.CSharp.AsyncRules",
       "AR1001:MethodsWithAsyncModifierShouldReturnAwaitable",
-      Justification = "event handler :))]
+      Justification = "no need to wait for task to end")]
     async void HandleEventAsync() { }
 
 ###### Disable in `Settings.StyleCop` file
