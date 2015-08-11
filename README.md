@@ -9,11 +9,11 @@ The following examples will result in StyleCop warnings:
 - **`Task DoSomethingAsync()` --> method should have `async` modifier**
  - see [Task-based Asynchronous Pattern (TAP)](https://msdn.microsoft.com/en-us/library/hh873175%28v=vs.110%29.aspx)
 
-## Installing
+## 1. Installation
 #### By Nuget
 If you have StyleCop integrated into your build already, just install the nuget package [StyleCop.CSharp.Async.Rules](https://www.nuget.org/packages/StyleCop.CSharp.Async.Rules/) in all projects you want to be verified.
 
-If you don't have installed StyleCop yet, i'd recommend installing the [StyleCop.MsBuild](https://www.nuget.org/packages/StyleCop.MSBuild/), too.
+If you don't have installed StyleCop yet, I'd recommend installing the nuget package [StyleCop.MsBuild](https://www.nuget.org/packages/StyleCop.MSBuild/).
 #### Manually
 The rules-dll (StyleCop.CSharp.Async.Rules.dll) is available on the [build server](https://ci.appveyor.com/project/BrunoJuchli/stylecop-csharp-async-rules)(see **Artifacts**).
 You can place it alongside the StyleCop.dll and StyleCop will automatically pick it up.
@@ -25,10 +25,10 @@ Alternatively, you can also tell StyleCop where to pick it up by defining an `St
       </StyleCopAdditionalAddinPaths>
     </ItemGroup>
 
-## Rule Description, Supression, Disabling
-
+## 2. Rules
+Description, supressing a violation and disabling a rule entirely
 #### Methods with `async` modifier must end with `Async`
-(**AR0001:MethodsWithAsyncModifierMustEndWithAsync**)
+ID: AR0001:MethodsWithAsyncModifierMustEndWithAsync
 
 Violated when an `async` method is named `Foo()` instead of `FooAsync()`.
 ###### Suppress specific warning / occurrence in code
@@ -52,7 +52,7 @@ Violated when an `async` method is named `Foo()` instead of `FooAsync()`.
     </Analyzer>
     
 #### Methods ending with `Async` must have `async` modifier
-(**AR0002:MethodEndingWithAsyncMustHaveAsyncModifier**)
+ID: AR0002:MethodEndingWithAsyncMustHaveAsyncModifier
 
 Violated when a method named `FooAsync` does not have the `async` modifier.
 
@@ -77,7 +77,7 @@ Violated when a method named `FooAsync` does not have the `async` modifier.
     </Analyzer>
     
 #### Methods with `async` modifier must return awaitable
-(**AR1001:MethodsWithAsyncModifierShouldReturnAwaitable**)
+ID: AR1001:MethodsWithAsyncModifierShouldReturnAwaitable
 
 Violated when a method  `async void FooAsync()` returns void instead of `Task` or another awaitable type.
 
