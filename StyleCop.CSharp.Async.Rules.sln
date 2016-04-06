@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StyleCop.CSharp.Async.Rules", "StyleCop.CSharp.Async.Rules\StyleCop.CSharp.Async.Rules.csproj", "{B1CD5431-B353-4C0C-A372-97BE0BF88255}"
 EndProject
@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Examples", "Examples\Exampl
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Specifications", "Specifications\Specifications.csproj", "{9F27A1F7-719F-4889-991E-F12E52B319CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReleaseTryout", "ReleaseTryout\ReleaseTryout.csproj", "{CBEBC125-E91F-47FA-A191-F49470396BA2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,6 +32,10 @@ Global
 		{9F27A1F7-719F-4889-991E-F12E52B319CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F27A1F7-719F-4889-991E-F12E52B319CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F27A1F7-719F-4889-991E-F12E52B319CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBEBC125-E91F-47FA-A191-F49470396BA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBEBC125-E91F-47FA-A191-F49470396BA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBEBC125-E91F-47FA-A191-F49470396BA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBEBC125-E91F-47FA-A191-F49470396BA2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
