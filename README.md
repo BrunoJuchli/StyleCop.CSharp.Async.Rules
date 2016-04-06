@@ -54,7 +54,8 @@ Violated when an `async` method is named `Foo()` instead of `FooAsync()`.
     
 #### Methods ending with `Async` must have `async` modifier or return a `Task`
 ID: AR0002:MethodEndingWithAsyncMustHaveAsyncModifierOrReturnTask
-Hint: This was recently adapted and renamed from MethodEndingWithAsyncMustHaveAsyncModifier to MethodEndingWithAsyncMustHaveAsyncModifier*OrReturnTask*
+
+> Hint: This was recently adapted and renamed from MethodEndingWithAsyncMustHaveAsyncModifier to MethodEndingWithAsyncMustHaveAsyncModifier*OrReturnTask*
 
 Violated when a method named `FooAsync` does not have the `async` modifier and does not return a `Task` / `Task<T>`.
 
