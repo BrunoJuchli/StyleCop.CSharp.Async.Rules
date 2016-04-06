@@ -9,12 +9,6 @@ The following examples will result in StyleCop warnings:
  - see [Task-based Asynchronous Pattern (TAP)](https://msdn.microsoft.com/en-us/library/hh873175%28v=vs.110%29.aspx)
 - **`Task DoSomethingAsync()` --> method should have `async` modifier**
  - see [Task-based Asynchronous Pattern (TAP)](https://msdn.microsoft.com/en-us/library/hh873175%28v=vs.110%29.aspx)
- 
- The reasoning for these rules can be found here:
- - https://msdn.microsoft.com/en-us/library/hh873175%28v=vs.110%29.aspx
- - https://msdn.microsoft.com/en-us/magazine/jj991977.aspx
- - http://www.filipekberg.se/2012/09/20/avoid-shooting-yourself-in-the-foot-with-tasks-and-async/
- - http://haacked.com/archive/2014/11/11/async-void-methods/
 
 ## 1. Installation
 #### By Nuget
