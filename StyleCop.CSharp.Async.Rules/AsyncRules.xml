@@ -7,9 +7,9 @@
         <Context>Methods with async modifier (p.Ex. public async Task DoStuffAsync()) must end with Async.</Context>
         <Description>Fires when an async method is named Foo() instead of FooAsync().</Description>
       </Rule>
-      <Rule Name="MethodEndingWithAsyncMustHaveAsyncModifier" CheckId="AR0002">
-        <Context>Methods whose name end with an Async suffix must use the async modifier (p.Ex. public async Task ExecuteAsync()).</Context>
-        <Description>Fires when a method is named FooAsync() but is missing the async modifier.</Description>
+      <Rule Name="MethodEndingWithAsyncMustHaveAsyncModifierOrReturnTask" CheckId="AR0002">
+        <Context>Methods whose name end with an Async suffix must use the async modifier or return a Task (p.Ex. public async Task ExecuteAsync() or public Task&lt;int&gt; ExecuteAsync()).</Context>
+        <Description>Fires when a method is named FooAsync() but doesn't return a task nor has the async modifier.</Description>
       </Rule>
       <Rule Name="MethodsWithAsyncModifierShouldReturnAwaitable" CheckId="AR1001">
         <Context>Methods with async modifier which return void are "fire and forget". They can't be synchronized and exceptions are lost.</Context>

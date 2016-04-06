@@ -11,11 +11,12 @@ namespace Specifications.MSBuild
 
         public void HandleOutput(DataReceivedEventArgs e)
         {
-            //Console.WriteLine(e.Data);
+            // show msbuild output in test runner console
+            Console.WriteLine(e.Data);
 
             try
             {
-                ProcessData(e);
+                this.ProcessData(e);
             }
             catch (Exception ex) // this is ugly, but throwing an exception here will block the build process for ever
             {

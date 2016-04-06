@@ -4,6 +4,12 @@
 
     public interface IInterfaceWithAsyncMethod
     {
+        void InvalidAsync();
+
+        TaskIsNotOne InvalidNotReturningProperTaskAsync();
+
         Task DoAsync();
+
+        Task<int> DoGenericAsync();
     }
 }

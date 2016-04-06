@@ -1,0 +1,3 @@
+﻿- when changing the rules, always clean/rebuild before running the tests
+- Resharper Runner:
+	- tests do not work when started in Debug

@@ -13,7 +13,7 @@
         {
             this.methodVisitors = new IMethodVisitor[]
             {
-                new MethodEndingWithAsyncMustHaveAsyncModifier(),
+                new MethodEndingWithAsyncMustHaveAsyncModifierOrReturnTask(),
                 new MethodsWithAsyncModifierMustEndWithAsync(),
                 new MethodsWithAsyncModifierShouldReturnAwaitable(),
             }

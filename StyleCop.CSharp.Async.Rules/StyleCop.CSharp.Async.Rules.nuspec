@@ -11,9 +11,9 @@
 		<!--<iconUrl>https://github.com/BrunoJuchli/StaticProxy.Fody/tree/master/Icons/package_icon.png</iconUrl>-->
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<description>Additional stylecop rules for the async / await c# features.</description>
-		<copyright>Copyright Bruno Juchli 2015</copyright>
+		<copyright>Copyright Bruno Juchli 2016</copyright>
 		<tags>StyleCop Async TPL await</tags>
-		<releaseNotes>Improved Rule AR0002:MethodEndingWithAsyncMustHaveAsyncModifier to not consider interface methods as violations (interface methods can't have the async modifier).</releaseNotes>
+		<releaseNotes>Renamed Rule AR0002:MethodEndingWithAsyncMustHaveAsyncModifier to AR000:MethodEndingWithAsyncMustHaveAsyncModifierOrReturnTask. Improved it to generate less false-positives.</releaseNotes>
 	</metadata>
 	<files>
 		<file src="..\StyleCop.CSharp.Async.Rules\bin\$configuration$\StyleCop.CSharp.Async.Rules*" target="tools" />

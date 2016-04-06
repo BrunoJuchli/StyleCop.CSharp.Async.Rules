@@ -4,12 +4,12 @@
 
     public class MethodsWithAsyncModifierMustEndWithAsyncExample
     {
-        public async Task Invalid()
+        public static async Task Invalid()
         {
             await Task.Delay(0);
         }
 
-        public async Task ValidAsync()
+        public static async Task ValidAsync()
         {
             await Task.Delay(0);
         }

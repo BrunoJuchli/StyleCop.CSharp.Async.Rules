@@ -1,6 +1,7 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/4k5lqfrunfd51g6y/branch/master?svg=true)](https://ci.appveyor.com/project/BrunoJuchli/stylecop-csharp-async-rules/branch/master)
 # StyleCop.CSharp.Async.Rules
 Additional StyleCop rules for `async / await` style programming.
+
 The following examples will result in StyleCop warnings:
 - **`async void DoSomethingAsync()` --> method should return awaitable instead of void**
  - see [Stephen Cleary](https://msdn.microsoft.com/en-us/magazine/jj991977.aspx), [Phil Haack](http://haacked.com/archive/2014/11/11/async-void-methods/),...
@@ -8,6 +9,12 @@ The following examples will result in StyleCop warnings:
  - see [Task-based Asynchronous Pattern (TAP)](https://msdn.microsoft.com/en-us/library/hh873175%28v=vs.110%29.aspx)
 - **`Task DoSomethingAsync()` --> method should have `async` modifier**
  - see [Task-based Asynchronous Pattern (TAP)](https://msdn.microsoft.com/en-us/library/hh873175%28v=vs.110%29.aspx)
+ 
+ The reasoning for these rules can be found here:
+ - https://msdn.microsoft.com/en-us/library/hh873175%28v=vs.110%29.aspx
+ - https://msdn.microsoft.com/en-us/magazine/jj991977.aspx
+ - http://www.filipekberg.se/2012/09/20/avoid-shooting-yourself-in-the-foot-with-tasks-and-async/
+ - http://haacked.com/archive/2014/11/11/async-void-methods/
 
 ## 1. Installation
 #### By Nuget
@@ -51,16 +58,17 @@ Violated when an `async` method is named `Foo()` instead of `FooAsync()`.
       </Rules>
     </Analyzer>
     
-#### Methods ending with `Async` must have `async` modifier
-ID: AR0002:MethodEndingWithAsyncMustHaveAsyncModifier
+#### Methods ending with `Async` must have `async` modifier or return a `Task`
+ID: AR0002:MethodEndingWithAsyncMustHaveAsyncModifierOrReturnTask
+Hint: This was recently adapted and renamed from MethodEndingWithAsyncMustHaveAsyncModifier to MethodEndingWithAsyncMustHaveAsyncModifier*OrReturnTask*
 
-Violated when a method named `FooAsync` does not have the `async` modifier.
+Violated when a method named `FooAsync` does not have the `async` modifier and does not return a `Task` / `Task<T>`.
 
 ###### Suppress specific warning / occurrence in code
 
     [SuppressMessage(
       "StyleCop.CSharp.AsyncRules",
-      "AR0002:MethodEndingWithAsyncMustHaveAsyncModifier",
+      "AR0002:MethodEndingWithAsyncMustHaveAsyncModifierOrReturnTask",
       Justification = "doesn't need the async modifier")]
     Task FooAsync() { }
 
@@ -68,7 +76,7 @@ Violated when a method named `FooAsync` does not have the `async` modifier.
 
     <Analyzer AnalyzerId="StyleCop.CSharp.AsyncRules">
       <Rules>
-        <Rule Name="MethodEndingWithAsyncMustHaveAsyncModifier">
+        <Rule Name="MethodEndingWithAsyncMustHaveAsyncModifierOrReturnTask">
             <RuleSettings>
               <BooleanProperty Name="Enabled">False</BooleanProperty>
             </RuleSettings>

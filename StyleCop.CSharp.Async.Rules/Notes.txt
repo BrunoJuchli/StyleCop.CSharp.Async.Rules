@@ -8,9 +8,7 @@ https://msdn.microsoft.com/en-us/magazine/jj991977.aspx
 http://www.filipekberg.se/2012/09/20/avoid-shooting-yourself-in-the-foot-with-tasks-and-async/
 http://haacked.com/archive/2014/11/11/async-void-methods/
 
-TODO: Test / Demo assemblies
 TODO: Automated tests
-TODO: Nuget package? Other packaging mechanism? (it's just one dll...)
 TODO: ignore async Foo (without Async suffix) of popular libraries? Like caliburn.micro async Task Handle<T>()?
 
 Future rules:

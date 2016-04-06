@@ -21,7 +21,8 @@ namespace Specifications.MSBuild
             var startInfo = new ProcessStartInfo
             {
                 FileName = MsBuildPath,
-                Arguments = projectFilePath + " /t:Clean;Build /nr:false /property:WithAsyncRules=TRUE", ///nr:false makes sure msbuild process ends and files are unlocked once build is done.
+                // nr:false makes sure msbuild process ends and files are unlocked once build is done.
+                Arguments = projectFilePath + " /t:Clean;Build /nr:false /property:WithAsyncRules=TRUE /p:RunCodeAnalysis=false",
                 CreateNoWindow = true,
                 WindowStyle = ProcessWindowStyle.Hidden,
                 UseShellExecute = false,
@@ -43,7 +44,7 @@ namespace Specifications.MSBuild
             {
                 string message = string.Format(
                     CultureInfo.InvariantCulture,
-                    "The msbuild process failed to terminate in {0} seconds", 
+                    "The msbuild process failed to terminate in {0} seconds",
                     BuildTimeout.TotalSeconds);
                 throw new TimeoutException(message);
             }

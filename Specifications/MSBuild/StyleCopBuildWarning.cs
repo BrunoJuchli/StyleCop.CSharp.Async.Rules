@@ -1,4 +1,6 @@
-﻿namespace Specifications.MSBuild
+﻿using System.Globalization;
+
+namespace Specifications.MSBuild
 {
     public class StyleCopBuildWarning
     {
@@ -15,5 +17,19 @@
         public string CheckId { get; set; }
 
         public string CheckNameSpace { get; set; }
+
+        public override string ToString()
+        {
+            return string.Format(
+                CultureInfo.InvariantCulture,
+                "'{0}:{1}' in Project '{2}' at {3}:{4}:{5} with {6}",
+                CheckId,
+                CheckNameSpace,
+                Project,
+                File,
+                Line,
+                Column,
+                Description);
+        }
     }
 }

@@ -4,7 +4,7 @@
     {
         public static bool IsAsyncMethod(this Method method)
         {
-            return method.Declaration.ContainsModifier(new[] { CsTokenType.Async });
+            return method.Declaration.ContainsModifier(CsTokenType.Async);
         }
 
         public static bool HasAsyncSuffix(this Method method)
