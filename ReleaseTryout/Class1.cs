@@ -19,4 +19,9 @@ namespace ReleaseTryout
             return Task.FromResult(1);
         }
     }
+
+    public abstract class AbstractClass
+    {
+        public abstract Task EncryptAsync();
+    }
 }
