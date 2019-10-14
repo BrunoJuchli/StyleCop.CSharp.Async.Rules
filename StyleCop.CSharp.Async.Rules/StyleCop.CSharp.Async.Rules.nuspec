@@ -13,7 +13,7 @@
 		<description>Additional stylecop rules for the async / await c# features.</description>
 		<copyright>Copyright Bruno Juchli 2016</copyright>
 		<tags>StyleCop Async TPL await</tags>
-		<releaseNotes>Renamed Rule AR0002:MethodEndingWithAsyncMustHaveAsyncModifier to AR000:MethodEndingWithAsyncMustHaveAsyncModifierOrReturnTask. Improved it to generate less false-positives.</releaseNotes>
+		<releaseNotes>Updated to StyleCop 6.1</releaseNotes>
 	</metadata>
 	<files>
 		<file src="..\StyleCop.CSharp.Async.Rules\bin\$configuration$\StyleCop.CSharp.Async.Rules*" target="tools" />
