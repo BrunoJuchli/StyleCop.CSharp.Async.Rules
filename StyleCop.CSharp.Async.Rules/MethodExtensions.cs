@@ -11,7 +11,7 @@
         {
             return method
                 .Name
-                .RemoveGenericParantheses()
+                .RemoveGenericParentheses()
                 .EndsWith("Async");
         }
     }

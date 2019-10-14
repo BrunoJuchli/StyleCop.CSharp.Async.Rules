@@ -27,7 +27,7 @@
 
         private static bool ReturnsTask(Method method)
         {
-            return method.ReturnType.Text.RemoveGenericParantheses() == "Task";
+            return method.ReturnType.Text.RemoveGenericParentheses() == "Task";
         }
 
         private static bool IsPartOfInterface(Method method)

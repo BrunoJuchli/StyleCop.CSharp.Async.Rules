@@ -2,7 +2,7 @@
 {
     internal static class StringExtensions
     {
-        public static string RemoveGenericParantheses(this string name)
+        public static string RemoveGenericParentheses(this string name)
         {
             int indexOfOpeningBracket = name.IndexOf('<');
             // > 0 ==> name can't begin with a bracket...
