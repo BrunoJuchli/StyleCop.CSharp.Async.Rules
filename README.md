@@ -64,8 +64,8 @@ Violated when a method named `FooAsync` does not have the `async` modifier and d
     [SuppressMessage(
       "StyleCop.CSharp.AsyncRules",
       "AR0002:MethodEndingWithAsyncMustHaveAsyncModifierOrReturnTask",
-      Justification = "doesn't need the async modifier")]
-    Task FooAsync() { }
+      Justification = "I'm cheating")]
+    int FooAsync() { }
 
 ###### Disable in `Settings.StyleCop` file
 
