@@ -7,7 +7,7 @@ The following examples will result in StyleCop warnings:
  - see [Stephen Cleary](https://msdn.microsoft.com/en-us/magazine/jj991977.aspx), [Phil Haack](http://haacked.com/archive/2014/11/11/async-void-methods/),...
 - **`async Task DoSomething()` --> method should be named  `DoSomethingAsync`**
  - see [Task-based Asynchronous Pattern (TAP)](https://msdn.microsoft.com/en-us/library/hh873175%28v=vs.110%29.aspx)
-- **`Task DoSomethingAsync()` --> method should have `async` modifier**
+- **`void DoSomethingAsync()` --> method should have `async` modifier or return a Task/Task<T>**
  - see [Task-based Asynchronous Pattern (TAP)](https://msdn.microsoft.com/en-us/library/hh873175%28v=vs.110%29.aspx)
 
 ## 1. Installation
